@@ -1,11 +1,22 @@
 body {margin:0;font-family:Arial}
 
 .topnav {
-  overflow: hidden;
   background-color: #333;
+  display: flex;
+  align-items: center;
 }
 
 .topnav a {
+  color: white;
+  flex-shrink: 1;
+  text-decoration: none;
+}
+
+.topnav > ul > li {
+  display: inline-block;
+}
+
+.topnav > ul > li a {
   display: block;
   color: #f2f2f2;
   padding: 16px 16px;
@@ -13,19 +24,20 @@ body {margin:0;font-family:Arial}
   font-size: 17px;
 
 }
-.topnav > a{
+.topnav > ul > li a {
     position: relative;
     float: right;
     margin-left: 20px;
 }
-.active {
+
+.topnav > ul > li .active {
   background-color: #2492ad;
   color: white;
   float: left;
 }
 
 /* giving the underline effect */
-.topnav > a::before{
+.topnav > ul > li a::before{
     position: absolute;
     bottom: 0;
     content:'';
@@ -34,16 +46,33 @@ body {margin:0;font-family:Arial}
     left: 0;
     transition: all 500ms cubic-bezier(0, 0.82, 1, 1);
 }
-.topnav > a:hover::before{
+
+.topnav > ul > li a:hover::before{
     width: 100%;
 }
+
 .arrowdown{
     height: 0;
     width: 0;
     border-right:7px solid transparent;
     border-left:7px solid transparent;
-    border-top:7px solid aqua;
+    border-top:7px solid #3b9696;
 }
+
 .dropdown{
     display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    min-width: 200px;
+    aspect-ratio: 1/1;
+    background: #3b9696;
+}
+
+.topnav li.has-dropdown {
+  position: relative;
+}
+
+.topnav li.has-dropdown:hover .dropdown, .dropdown:hover {
+  display: block;
 }
