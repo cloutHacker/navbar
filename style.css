@@ -1,11 +1,12 @@
 body {margin:0;font-family:Arial}
 
 .topnav {
-  overflow: hidden;
+  /* overflow: hidden; */
+  height: 55px;
   background-color: #333;
 }
 
-.topnav a {
+.topnav a , div.parent{
   display: block;
   color: #f2f2f2;
   padding: 16px 16px;
@@ -13,7 +14,7 @@ body {margin:0;font-family:Arial}
   font-size: 17px;
 
 }
-.topnav > a{
+.topnav > a, div.parent{
     position: relative;
     float: right;
     margin-left: 20px;
@@ -45,5 +46,26 @@ body {margin:0;font-family:Arial}
     border-top:7px solid aqua;
 }
 .dropdown{
+    /* padding: 16px; */
+    width: 200px;
+    position: absolute;
     display: none;
+    background-color: #2492ad;
+    top:110%;
+}
+div.parent:hover >  div.dropdown{
+    display:block;
+    color: black;
+}
+div.dropdown a:hover {
+background: #11829e;
+}
+.arrowup{
+  position: absolute;
+  top: -10px;
+  height: 0;
+  width: 0;
+  border-right:10px solid transparent;
+  border-left:10px solid transparent;
+  border-bottom:10px solid aqua; 
 }
