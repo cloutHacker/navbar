@@ -19,6 +19,9 @@ body {margin:0;font-family:Arial}
     float: right;
     margin-left: 20px;
 }
+.topnav a:hover {
+  background: rgb(182, 26, 26);
+}
 .active {
   background-color: #2492ad;
   color: white;
@@ -51,7 +54,7 @@ body {margin:0;font-family:Arial}
     position: absolute;
     display: none;
     background-color: #2492ad;
-    top:110%;
+    top:100%;
 }
 div.parent:hover >  div.dropdown{
     display:block;
